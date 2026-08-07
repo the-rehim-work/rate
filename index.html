@@ -1,1 +1,245 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Xidmətlər Portalı</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <!-- Portal Card -->
+        <div class="portal-card">
+
+            <div class="portal-dots">
+                <span class="dot green"></span>
+                <span class="dot red"></span>
+                <span class="dot navy"></span>
+            </div>
+
+            <div class="portal-line"></div>
+
+            <h2>E-Xidmətlər Portalı</h2>
+
+            <p>
+                Müdafiə Nazirliyinin rəsmi e-xidmətlər portalına xoş gəlmisiniz.
+                Xidmətlərə daxil olmaq üçün müraciət edin.
+            </p>
+
+        </div>
+
+        <!-- Rating Section -->
+        <div class="rating-section">
+
+            <div class="rating-label">
+                Rəyinizi bildirin
+            </div>
+
+            <button id="openRatingBtn" class="rate-btn">
+
+                <svg width="15" height="15" viewBox="0 0 24 24">
+                    <polygon
+                        points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                        fill="#fff"
+                        stroke="#fff"
+                        stroke-width="1">
+                    </polygon>
+                </svg>
+
+                <span>Göstərdiyimiz xidməti qiymətləndirin</span>
+
+                <svg width="14" height="14" viewBox="0 0 24 24">
+                    <polyline
+                        points="9,18 15,12 9,6"
+                        stroke="#fff"
+                        stroke-width="2.2"
+                        fill="none"
+                        stroke-linecap="round">
+                    </polyline>
+                </svg>
+
+            </button>
+
+            <!-- Social Proof -->
+            <div class="social-proof">
+
+                <div class="proof-stars">
+
+                    <svg class="mini-star" viewBox="0 0 24 24">
+                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                    </svg>
+
+                    <svg class="mini-star" viewBox="0 0 24 24">
+                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                    </svg>
+
+                    <svg class="mini-star" viewBox="0 0 24 24">
+                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                    </svg>
+
+                    <svg class="mini-star" viewBox="0 0 24 24">
+                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                    </svg>
+
+                    <svg class="mini-star empty" viewBox="0 0 24 24">
+                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                    </svg>
+
+                </div>
+
+                <span class="rating-score">4.2 / 5</span>
+
+                <span class="rating-count">
+                    · 14,823 rəy
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div id="ratingModal" class="modal-overlay">
+
+        <div class="rating-modal">
+
+            <!-- Header -->
+            <div class="modal-header">
+
+                <div class="circle-large"></div>
+                <div class="circle-small"></div>
+
+                <div class="header-content">
+
+                    <div class="header-left">
+
+                        <div class="header-icon">
+
+                            <svg width="16" height="16" viewBox="0 0 24 24">
+                                <polygon
+                                    points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                                    fill="#fff"
+                                    stroke="#fff">
+                                </polygon>
+                            </svg>
+
+                        </div>
+
+                        <div>
+
+                            <div class="header-title">
+                                Göstərdiyimiz xidməti qiymətləndirin
+                            </div>
+
+                            <div class="header-subtitle">
+                                E-xidmətlər portalı
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button id="closeModalBtn" class="close-btn">
+                        ×
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Content -->
+            <div class="modal-body">
+
+                <div id="ratingChip" class="rating-chip">
+                    <span id="ratingChipLabel">Ulduz seçin</span>
+                </div>
+
+                <div id="starContainer" class="stars-container">
+                    <!-- JS injects stars -->
+                </div>
+
+                <div class="scale-row">
+                    <span>Çox pis</span>
+                    <span>Əla</span>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="comment-wrapper">
+
+                    <label>
+                        Təklif və şikayətlər
+                    </label>
+
+                    <!-- No whitespace inside the tag: any newline/indent here
+                         becomes the textarea's initial value. -->
+                    <textarea
+                        id="commentBox"
+                        maxlength="400"
+                        rows="3"
+                        placeholder="Təklifinizi və ya şikayətinizi buraya yazın..."></textarea>
+
+                    <div id="charCounter" class="counter">
+                        0 / 400
+                    </div>
+
+                </div>
+
+                <div class="submit-wrapper">
+
+                    <button id="submitBtn" class="submit-btn" disabled>
+                        Göndər
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Success Screen -->
+            <div id="successScreen" class="success-screen">
+
+                <div class="success-icon">
+
+                    <svg width="26" height="26" viewBox="0 0 24 24">
+                        <polyline
+                            points="20,6 9,17 4,12"
+                            stroke="#fff"
+                            stroke-width="2.5"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round">
+                        </polyline>
+                    </svg>
+
+                </div>
+
+                <h3>Təşəkkür edirik!</h3>
+
+                <p>
+                    Rəyiniz uğurla qeydə alındı.
+                </p>
+
+                <div id="successRating"></div>
+
+            </div>
+
+            <div id="countdownBar" class="countdown-bar">
+                <div class="countdown-progress"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
